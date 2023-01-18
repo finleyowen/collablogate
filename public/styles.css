@@ -1,0 +1,121 @@
+div#app {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p.lead {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+div.container {
+  margin: auto;
+  padding: 1em 2em;
+}
+div.container-xs {
+  max-width: 575px;
+}
+div.container-sm {
+  max-width: 576px;
+}
+div.container-md {
+  max-width: 768px;
+}
+div.container-lg {
+  max-width: 992px;
+}
+div.container-xl {
+  max-width: 1200px;
+}
+
+a.app-link {
+  text-decoration: none;
+  margin: 1rem;
+  font-weight: bold;
+}
+a.app-link-prim {
+  color: #EF2D56;
+}
+a.app-link-sec {
+  color: #F6AE2D;
+}
+a.app-link-tert {
+  color: #37718E;
+}
+
+div.display {
+  margin-top: 1.5em;
+  padding: 0 1.5em;
+  border-radius: 0.5rem;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+div.display * {
+  margin: 1rem 0;
+}
+@media (min-width: 992px) {
+  div.display {
+    padding: 0 5rem;
+  }
+}
+
+form.app-form {
+  margin-top: 2rem;
+}
+form.app-form input {
+  font-size: large;
+  padding: 0.5rem 1rem;
+  margin-top: 0.6rem;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+@media (max-width: 575px) {
+  form.app-form input {
+    width: 90%;
+  }
+}
+form.app-form div {
+  margin: 2em 1em;
+}
+form.app-form label {
+  font-size: large;
+}
+form.app-form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+form.app-form button:hover {
+  background-color: white;
+  color: black;
+}
+
+nav.app-nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+nav.app-nav a {
+  text-decoration: none;
+  color: black;
+  padding-left: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

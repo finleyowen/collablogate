@@ -1,0 +1,14 @@
+extends ../_template.pug
+
+block bodycontent
+    .container.container-md
+        h1 Welcome back to collablogate, #{name}!
+        form.app-form(action="/auth/login" method="post")
+            div
+                label Enter your email address.
+                input(name="email" readonly type="text" placeholder="example@example.com" value=email)
+            div
+                label Enter your password.
+                input(name="password" type="password")
+            div
+                input(type="submit")

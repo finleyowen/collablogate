@@ -1,0 +1,9 @@
+extends ../_template.pug
+
+block bodycontent
+    .container.container-md
+        h1 Sign up or log in 
+            form.app-form(action="/auth" method="post")
+                label Enter your email address
+                input(type="text" name="email" placeholder="example@example.com")
+                input(type="submit")

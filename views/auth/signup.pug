@@ -1,0 +1,23 @@
+extends ../_template.pug
+
+block headcontent
+    script
+
+block bodycontent
+    .container.container-md
+        h1 Sign up to Collablogate
+        form.app-form(action="/auth/signup" method="post")
+            div
+                label Enter your email address.
+                input(name="email" readonly type="text" placeholder="example@example.com" value=email)
+            div 
+                label What can others call you?
+                input(name="name" type="text" placeholder="Your public display name")
+            div 
+                label Choose a password.
+                input(name="password" type="password" placeholder="Password")
+            div
+                label Retype your password.
+                input(name="confirmPassword" type="password" placeholder="Confirm")
+            div
+                input(type="submit")
