@@ -4,9 +4,11 @@ html(lang="en")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(charset="utf-8")
         link(rel="stylesheet" href="/static/styles.css")
-        title #{title} | Collablogate 
         block headcontent
     body
     #app
         include includes/_nav.pug
+        if err
+            .container.containder-md
+                .alert.alert-danger= err
         block bodycontent

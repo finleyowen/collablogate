@@ -2,13 +2,12 @@ extends ../_template.pug
 
 block bodycontent
     .container.container-md
-        h1 Welcome back to collablogate, #{name}!
-        form.app-form(action="/auth/login" method="post")
-            div
-                label Enter your email address.
-                input(name="email" readonly type="text" placeholder="example@example.com" value=email)
-            div
-                label Enter your password.
-                input(name="password" type="password")
-            div
-                input(type="submit")
+        h1 Sign in
+        form(action="/auth/login" method="post")
+            .mb-3
+                label.form-label What's your email address?
+                input(type="email" name="email" id="email" aria-describedby="emailHelp" value=email readonly).form-control
+            .mb-3
+                label.form-label Choose a password
+                input(type="password" name="password" id="password" aria-describedby="passwordHelp").form-control
+            button.btn.btn-primary.mt-3 Submit

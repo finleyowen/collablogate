@@ -1,4 +1,13 @@
-nav.app-nav
-    a(href="/")
-        h1 Collablogate
-    a(href="/auth") Get started
+nav.navbar.navbar-expand-md
+    .container-fluid
+        a(href="/").navbar-brand.mb-0 Collablogate
+        button(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation").navbar-toggler
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse
+            ul.navbar-nav.me-auto
+                li.nav-item
+                    a.nav-link Blogs
+                li.nav-item
+                    a.nav-link Products
+                li.nav-item
+                    a.nav-link Docs

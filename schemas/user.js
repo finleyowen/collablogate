@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ProviderSchema = new mongoose.Schema({
     name: {
@@ -18,16 +18,21 @@ const ProviderSchema = new mongoose.Schema({
 const UserSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: [true, "Email address is required"],
+        required: [true, 'Email address is required.'],
         unique: [
             true,
-            "The email you entered is already linked to a Collablogate account.",
+            'The email you entered is already linked to a Collablogate account.',
         ],
     },
     name: {
         type: String,
-        required: [true, "Display name is required"],
-        unique: [true, "The display name you entered is taken."],
+        required: [true, 'Display name is required.'],
+        unique: false,
+    },
+    username: {
+        type: String,
+        required: [true, 'Username is required.'],
+        unique: [true, 'The username you entered is taken.']
     },
     password: {
         type: String,

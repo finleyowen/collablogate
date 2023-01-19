@@ -1,7 +1,14 @@
 extends ./_template.pug
 
+block headcontent
+    title Collablogate
+
 block bodycontent
-    .container.container-md
-        h1 Collaborative and customisable blogs 
-            small for every type of blogger
-        .text-center 
+    .container.container-md.mt-5
+        h1.display-1 Collablogate | 
+            small.text-muted reliable, beautiful, custom, and collaborative online spaces
+        .text-center.mt-5
+            p.lead Start your Collablogate journey with or without code.
+            .btn-group.mt-4
+                a(href="/auth").btn.btn-primary.btn-lg Get started
+                a(href="#").btn.btn-secondary.btn-lg Read the docs

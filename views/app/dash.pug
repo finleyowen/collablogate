@@ -1,0 +1,22 @@
+extends ../_template.pug
+
+block headcontent
+    title Dashboard
+
+block bodycontent
+    .container.container-md.mt-5
+        h1.display-2 Dashboard
+        p.lead.mb-5 Signed in as 
+            b #{name}
+        h2 My blogs
+        p There's nothing to display here yet!
+        .btn-group.mb-4
+            a(href="/app/blogs/new-blog").btn.btn-primary New blog
+            a(href="/app/blogs/join-blog").btn.btn-secondary Join blog
+        h2 My posts
+        p There's nothing to display here yet!
+        a(href="/app/posts/new").btn.btn-primary.mb-4 New post
+        h2 Activity
+        p
+            a(href="/app/inbox") Inbox
+            i  (0)

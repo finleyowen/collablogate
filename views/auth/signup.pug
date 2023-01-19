@@ -1,23 +1,26 @@
 extends ../_template.pug
 
-block headcontent
-    script
-
 block bodycontent
     .container.container-md
-        h1 Sign up to Collablogate
-        form.app-form(action="/auth/signup" method="post")
-            div
-                label Enter your email address.
-                input(name="email" readonly type="text" placeholder="example@example.com" value=email)
-            div 
-                label What can others call you?
-                input(name="name" type="text" placeholder="Your public display name")
-            div 
-                label Choose a password.
-                input(name="password" type="password" placeholder="Password")
-            div
-                label Retype your password.
-                input(name="confirmPassword" type="password" placeholder="Confirm")
-            div
-                input(type="submit")
+        h1 Sign up
+        form(action="/auth/signup" method="post")
+            .mb-3
+                label.form-label What's your email address?
+                input(type="email" name="email" id="email" aria-describedby="emailHelp" value=email readonly).form-control
+                div#emailHelp.form-text Your email will never be redistributed.
+            .mb-3
+                label.form-label What can we call you?
+                input(type="text" name="name" id="name" aria-describedby="nameHelp").form-control
+                div#nameHelp.form-text Your name can only contain letters, apostrophes ('), and dashes (-).
+            .mb-3
+                label.form-label Choose a username
+                input(type="text" name="username" id="username" aria-describedby="usernameHelp").form-control
+                div#usernameHelp.form-text Your username can only contain lowercase letters, numbers, dashes (-), and underscores (_)
+            .mb-3
+                label.form-label Choose a password
+                input(type="password" name="password" id="password" aria-describedby="passwordHelp").form-control
+                div#passwordHelp.form-text Password should be between 8 and 20 characters.
+            .mb-3
+                label.form-label Confirm password
+                input(type="password" name="confirmPassword" id="confirmPassword").form-control
+            button(type="submit").btn.btn-primary.mt-3 Submit
